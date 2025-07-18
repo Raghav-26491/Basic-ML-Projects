@@ -7,7 +7,7 @@ This project utilizes a dataset of movies (Movies_dataset.csv) containing inform
 
 Features
 
-•	Data Pre-processing: The dataset is cleaned and transformed to create a tags column by combining overview and genre.
+•	Data Pre-processing: The dataset is cleaned and transformed to create a tags column by combining the overview and genre.
 
 •	Recommendation Algorithm: Uses cosine similarity to suggest movies similar to the selected one.
 
@@ -49,7 +49,6 @@ Acknowledgments
 
 The dataset is sourced from Kaggle.
 
-This project is a part of my Bharat Intern Internship Task.
 
 Project Output Photo 
 
