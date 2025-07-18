@@ -53,4 +53,6 @@ This project is a part of my Bharat Intern Internship Task.
 
 Project Output Photo 
 
-<img width="1440" alt="Output" src="https://github.com/Raghav-26491/Movie-Recommendation-System/assets/145380406/4f3e929b-c683-4624-96fc-7ad326d84f5a">
+<img width="1440" height="900" alt="Movie" src="https://github.com/user-attachments/assets/56a6e789-1443-45c0-993e-4066d1ae174c" />
+
+
