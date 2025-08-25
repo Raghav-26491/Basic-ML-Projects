@@ -48,7 +48,7 @@ Clone repository.
 
 3. Select a movie → Click Show Recommendations → See top 5 similar movies.
 
-🙏 Acknowledgments
+Acknowledgments
 
 Dataset sourced from Kaggle.
 
