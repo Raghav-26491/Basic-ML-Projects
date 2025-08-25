@@ -4,11 +4,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
 
+DATA_PATH = "Movie-Recommendation/Movies_dataset.csv"
+
 @st.cache_resource
 def load_data():
-    
-    BASE_DIR = os.path.dirname(__file__)
-    movies = pd.read_csv(os.path.join(BASE_DIR, "Movies_dataset.csv"))
+
+    movies = pd.read_csv(DATA_PATH)
 
     movies = movies[['id', 'title', 'overview', 'genre']]
 
