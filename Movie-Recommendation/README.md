@@ -29,7 +29,7 @@ Runs smoothly with no need for extra preprocessing scripts.
 
 📂 Files
 
-Main.py – Streamlit app containing the recommendation system.
+app.py – Streamlit app containing the recommendation system.
 
 Movies_dataset.csv – Dataset containing movie information.
 
