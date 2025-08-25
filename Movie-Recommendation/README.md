@@ -1,53 +1,58 @@
-Movie Recommendation System
+🎬 Movie Recommendation System
 
-This Movie Recommendation System uses content-based filtering to recommend movies based on their similarity in tags (combining overview and genre).
+This Movie Recommendation System uses content-based filtering to recommend movies based on their similarity in tags (combining overview, genre, and language).
 
-Overview
-This project utilizes a dataset of movies (Movies_dataset.csv) containing information about movie titles, overviews, and genres. Initially, the dataset is processed to extract relevant information and create a recommendation system based on movie similarities.
+📌 Overview
 
-Features
+This project processes a dataset of movies (Movies_dataset.csv) and builds a recommendation engine using TF-IDF Vectorization and cosine similarity.
 
-•	Data Pre-processing: The dataset is cleaned and transformed to create a tags column by combining the overview and genre.
+To keep the app fast, heavy preprocessing (vectorization + similarity matrix) is done once and saved as pickles. The Streamlit app then loads these precomputed files for real-time recommendations.
 
-•	Recommendation Algorithm: Uses cosine similarity to suggest movies similar to the selected one.
+✨ Features
 
-•	Streamlit App: Utilizes Streamlit for creating an interactive user interface to select movies and view recommendations.
+Data Pre-processing:
 
-How to Use
+Cleans dataset and creates a tags column by combining overview, genre, and original_language.
 
-•	Setup: Clone this repository to your local environment.
+Recommendation Algorithm:
 
-•	Dependencies: Install necessary dependencies by running pip install -r requirements.txt.
+Uses TF-IDF + cosine similarity to compute similarity between movies.
 
-•	Run the App: Execute streamlit run app.py to launch the app.
+Optimized with numpy.argpartition for faster top-N recommendations.
 
-•	Select a Movie: Choose a movie from the dropdown menu.
+Streamlit App:
 
-•	Get Recommendations: Click the "Show Recommendations" button to view recommended movies.
+Interactive interface to select a movie and instantly get similar recommendations.
 
-Files
+Runs smoothly even for large datasets.
 
-1.	main.py: Contains the main logic for generating movie recommendations.
+📂 Files
 
-2.	app.py: Streamlit-based interface to interact with the recommendation system.
+1. preprocess.py – Precomputes TF-IDF vectors & cosine similarity, saves results into pickle files.
 
-3.	Movies_dataset.csv: Dataset used for movie information.
+2. main.py – Streamlit app that loads preprocessed files and provides recommendations.
 
-4.	movies_list.pkl: Pickled file containing processed movie data.
+3. Movies_dataset.csv – Dataset containing movie information.
 
-5.	similarity.pkl: (Not included) The similarity.pkl file could not be added to the repository due to its large size.
+4. movies_list.pkl – Pickled processed movie metadata.
 
-Setup Instructions
+5. similarity.pkl – Pickled similarity matrix (not included in repo due to large size; generate it with preprocess.py).
 
-•	Clone the repository:
-•	git clone https://github.com/Raghav-26491/Movie-Recommendation-System.git
+🛠 Setup Instructions
 
-•	Run the Streamlit app:
-•	streamlit run app.py
+Clone repository.
 
-Acknowledgments
+1. Run python preprocess.py once to generate pickle files.
 
-The dataset is sourced from Kaggle.
+2. Launch app with streamlit run main.py.
+
+3. Select a movie → Click Show Recommendations → See top 5 similar movies.
+
+🙏 Acknowledgments
+
+Dataset sourced from Kaggle.
+
+Built using Pandas, Scikit-Learn, Numpy, and Streamlit.
 
 
 Project Output Photo 
